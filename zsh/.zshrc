@@ -97,3 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Export the DISPLAY for Windows Subsystem for Linux (WSL)
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
